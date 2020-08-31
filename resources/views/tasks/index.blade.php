@@ -4,6 +4,10 @@
 
     <h1>タスク一覧</h1>
     
+    {{-- タスク作成ページへのリンク --}}
+    {!! link_to_route('tasks.create', '新規タスクのリマインド', [], ['class' => 'btn btn-primary']) !!}
+
+    
     @if (count($tasks) > 0)
         <table class='table table-striped'>
             <thead>
@@ -29,7 +33,5 @@
     {{-- ページネーションのリンク --}}
     {{ $tasks->links() }}
     
-    {{-- タスク作成ページへのリンク --}}
-    {!! link_to_route('tasks.create', '新規タスクのリマインド', [], ['class' => 'btn btn-primary']) !!}
-
+    
 @endsection
