@@ -2,8 +2,7 @@
 
 @section('content')
     @if (Auth::check())
-        {{-- タスク作成ページへのリンク --}}
-        {!! link_to_route('tasks.create', '新規タスクのリマインド', [], ['class' => 'btn btn-primary']) !!}
+        @include('tasks.index')
     @else
         <div class="center jumbotron">
             <div class="text-center">
